@@ -31,6 +31,7 @@ const onRequestError = (error: AxiosError): Promise<AxiosError> => {
     return Promise.reject(error);
 };
 
+// @ts-ignore
 apiInstance.interceptors.request.use(onRequest, onRequestError);
 
 export default apiInstance;
