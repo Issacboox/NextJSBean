@@ -1,7 +1,5 @@
-"use client";
-
-import axios from "axios";
-import { AxiosRequestConfig, AxiosError } from "axios";
+"use client"
+import axios, { InternalAxiosRequestConfig } from 'axios';
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL_API;
 
 const apiInstance = axios.create({
@@ -12,26 +10,19 @@ const apiInstance = axios.create({
         Authorization: "",
     },
 });
+  
 
-const onRequest = (config: AxiosRequestConfig): AxiosRequestConfig => {
+const onRequest = async (config: InternalAxiosRequestConfig) => {
     console.info(`[request] [${JSON.stringify(config)}]`);
     const token = localStorage.getItem("token");
 
-    return {
-        ...config,
-        headers: {
-            ...config.headers,
-            Authorization: token ? `Bearer ${token}` : "",
-        },
-    };
+    if (config.headers) {
+        config.headers.Authorization = token ? `Bearer ${token}` : "";
+    }
+
+    return config;
 };
 
-const onRequestError = (error: AxiosError): Promise<AxiosError> => {
-    console.error(`[request error] [${JSON.stringify(error)}]`);
-    return Promise.reject(error);
-};
-
-// @ts-ignore
-apiInstance.interceptors.request.use(onRequest, onRequestError);
+apiInstance.interceptors.request.use(onRequest);
 
 export default apiInstance;

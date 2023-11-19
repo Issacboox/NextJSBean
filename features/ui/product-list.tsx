@@ -1,3 +1,5 @@
+"use client";
+
 import { Product } from "../product/type";
 
 type Props = {
@@ -6,6 +8,8 @@ type Props = {
 };
 
 export default function ProductList({ productList, onClick }: Props) {
+
+
   return (
     <div>
       <ul className="flex flex-col gap-2">

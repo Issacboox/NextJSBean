@@ -1,3 +1,5 @@
+"use client";
+
 import { useCartStore } from "./store";
 import ProductList from "../ui/product-list";
 
