@@ -1,5 +1,7 @@
 "use client";
+import CardSuggest from "@/components/card";
 import WhyComponent from "@/components/why";
+import { Salad } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,8 +14,8 @@ export default function Home() {
           <p className="text-[64px] font-[600]">Hello</p>
           <p className="text-[20px]">
             Welcome to our online haven, where convenience meets quality. We are
-            here to transform <br /> your shopping experience—bringing the
-            store directly to your doorstep. Explore, order,
+            here to transform <br /> your shopping experience—bringing the store
+            directly to your doorstep. Explore, order,
             <br /> and indulge in the ease of shopping redefined.
           </p>
           <Link href="/store">
@@ -24,8 +26,15 @@ export default function Home() {
         </div>
         <WhyComponent />
       </div>
+      <div className="mt-[100px] ms-[300px] me-[300px]">
+        <Salad strokeWidth={1.5} />
+        <h3 className="text-[30px] mb-3 inline-block">Vegetable Menu Suggestion </h3>
+        <hr />
+        <div className="mt-[20px]">
+          <CardSuggest />
+        </div>
 
-
+      </div>
     </div>
   );
 }
