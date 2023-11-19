@@ -6,8 +6,8 @@ const imageLogoUrl =
 
 export default function Header() {
     return (
-        <div className="shadow-md sticky top-0 left-0 right-0">
-            <div className="max-w-[1280px] mx-auto h-20 flex items-center">
+        <div className=" sticky top-0 left-0 right-0">
+            <div className="max-w-[1380px] mx-auto h-20 flex items-center">
                 <Link href="/">
                     <div className="flex flex-row items-center">
                         <div className="h-16 aspect-[3/1] w-auto">
@@ -20,14 +20,14 @@ export default function Header() {
                         <SearchIcon className="animate-pulse" />
                     </Link> */}
 
-                    <a href="#">
+                    <a href="/aboutme">
                         <p className="hover:bg-green-400 hover:text-white text-[16px] p-3 rounded-xl" >about us</p>
                     </a>
-                    <a href="#">
+                    <a href="/store">
                         <p className="hover:bg-green-400 hover:text-white  text-[16px] p-3 rounded-xl">store</p>
                     </a>
                     <a href="/login">
-                        <p className="hover:bg-green-400 hover:text-white  text-[16px] p-3 rounded-xl">login</p>
+                        <p className="hover:bg-green-400 hover:text-white  text-[16px] p-3 rounded-xl">login/register</p>
                     </a>
                     <Link href="/cart">
                         <ShoppingBag className="hover:scale-105 hover:color-red-500  text-[16px] " />
