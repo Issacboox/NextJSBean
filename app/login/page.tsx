@@ -24,9 +24,10 @@ export default function Login() {
     return (
         <div className="flex justify-center content-center mt-4">
             <Tabs defaultValue="account" className="w-[400px]">
-                <TabsList className="grid w-full grid-cols-2">
+                <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="login">Login</TabsTrigger>
                     <TabsTrigger value="register">Register</TabsTrigger>
+                    <TabsTrigger value="forget">Forget Password</TabsTrigger>
                 </TabsList>
                 <TabsContent value="login">
                     <Card>
@@ -103,7 +104,26 @@ export default function Login() {
                             </div>
                         </CardContent>
                         <CardFooter>
-                            <Button>Save password</Button>
+                            <Button>Register</Button>
+                        </CardFooter>
+                    </Card>
+                </TabsContent>
+                <TabsContent value="forget">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle>Forget Password</CardTitle>
+                            <CardDescription>
+                                Please input your email
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-2">
+                            <div className="space-y-1">
+                                <Label htmlFor="current">Email</Label>
+                                <Input type="email" id="current" />
+                            </div>
+                        </CardContent>
+                        <CardFooter>
+                            <Button>Confirm</Button>
                         </CardFooter>
                     </Card>
                 </TabsContent>

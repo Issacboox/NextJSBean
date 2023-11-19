@@ -21,16 +21,16 @@ export default function Header() {
                     </Link> */}
 
                     <a href="#">
-                        <p className="hover:bg-green-400 hover:text-white text-[16px]" >about us</p>
+                        <p className="hover:bg-green-400 hover:text-white text-[16px] p-3 rounded-xl" >about us</p>
                     </a>
                     <a href="#">
-                        <p className="hover:bg-green-400 hover:text-white  text-[16px]">store</p>
+                        <p className="hover:bg-green-400 hover:text-white  text-[16px] p-3 rounded-xl">store</p>
                     </a>
                     <a href="/login">
-                        <p className="hover:bg-green-400 hover:text-white  text-[16px]">login</p>
+                        <p className="hover:bg-green-400 hover:text-white  text-[16px] p-3 rounded-xl">login</p>
                     </a>
                     <Link href="/cart">
-                        <ShoppingBag className="hover:scale-105 hover:color-red-500  text-[16px]" />
+                        <ShoppingBag className="hover:scale-105 hover:color-red-500  text-[16px] " />
                     </Link>
                 </div>
             </div>
