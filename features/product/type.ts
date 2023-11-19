@@ -3,3 +3,7 @@ export type Product = {
     name: string;
     price: number;
 };
+
+export interface CartItem extends Product {
+    amount: number;
+}

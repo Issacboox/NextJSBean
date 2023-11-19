@@ -1,8 +1,3 @@
-
 export default function AboutMe() {
-    return (
-        <>
-            about me
-        </>
-    )
+    return <>about me</>;
 }

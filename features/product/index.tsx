@@ -1,3 +1,5 @@
+"use client";
+
 import ProductList from "../ui/product-list";
 import { Product } from "./type";
 import { useProductStore } from "./store";
